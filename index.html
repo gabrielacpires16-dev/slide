@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apresentação — Grupo Primavera (Diagrama & Protótipos)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #fff5f5;
+      --card: #ffffff;
+      --primary: #c62828; /* strong red */
+      --primary-2: #ff5252;
+      --muted: #6b3a3a;
+      --text: #2b0b0b;
+      --glass: rgba(198,40,40,0.06);
+      --maxw: 1100px;
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,var(--bg),#fff);color:var(--text);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:22px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+    h1{margin:0;color:var(--primary);font-size:22px;letter-spacing:0.2px}
+    .meta{color:var(--muted);font-size:13px}
+    .controls{display:flex;gap:10px}
+    .btn{
+      background:linear-gradient(90deg,var(--primary),var(--primary-2));
+      color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;box-shadow:0 10px 30px rgba(198,40,40,0.12);
+      transition:transform .12s, box-shadow .18s, filter .12s;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(198,40,40,0.18)}
+    .slides{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 30px 80px rgba(11,11,11,0.06)}
+    .slide{display:none}
+    .slide.active{display:block}
+    .columns{display:grid;grid-template-columns:1fr 380px;gap:18px}
+    .card{background:linear-gradient(180deg,#fff,#fff9f9);border-radius:12px;padding:14px;box-shadow:0 10px 30px var(--glass);border:1px solid rgba(198,40,40,0.04)}
+    .note{font-size:13px;color:var(--muted);line-height:1.45}
+    .title-accent{color:var(--primary);font-weight:700}
+    .proto-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+    .mock{background:linear-gradient(180deg,#fff,#fff7f7);border-radius:10px;padding:12px;border:1px solid rgba(255,82,82,0.06);box-shadow:0 12px 26px rgba(198,40,40,0.04)}
+    .mock h4{margin:6px 0 8px;color:#7b2c2c}
+    .mock svg{border-radius:8px}
+    .legend{font-size:13px;color:var(--muted);margin-top:10px}
+    .nav-actions{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    .fancy-footer{
+      margin-top:18px;padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff7f7,#fff5f5);border-top:3px solid rgba(198,40,40,0.06);box-shadow:0 8px 22px rgba(198,40,40,0.04)
+    }
+    .small-muted{font-size:12px;color:var(--muted)}
+    @media(max-width:980px){ .columns{grid-template-columns:1fr} .controls{flex-wrap:wrap} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Grupo Primavera — Diagrama & Protótipos</h1>
+        <div class="meta">Apresentação gerada a partir do site oficial — layout atualizado em vermelho</div>
+      </div>
+      <div class="controls">
+        <button id="prev" class="btn">◀ Anterior</button>
+        <button id="next" class="btn">Próximo ▶</button>
+        <button id="download" class="btn" title="Baixar slides">Baixar HTML</button>
+      </div>
+    </header>
+
+    <main class="slides">
+      <!-- Slide 1 -->
+      <section id="slide-1" class="slide active" aria-labelledby="s1-title">
+        <div class="card">
+          <h2 id="s1-title" class="title-accent">Capa — Grupo Primavera</h2>
+          <div class="columns" style="align-items:center">
+            <div>
+              <p class="note">Apresentação com: diagrama de casos de uso, protótipos das telas principais (low-fidelity), backlog inicial e próximos passos. Visual atualizado com paleta vermelha para combinar com a identidade visual do site.</p>
+              <div style="margin-top:12px" class="note"><strong>Base:</strong> hero, programas, impacto, formas de ajudar e contato (arquivo: grupo-primavera.html)</div>
+              <div class="nav-actions" style="margin-top:16px">
+                <div class="small-muted">Navegue com as setas ou botões</div>
+                <div class="small-muted">Slide 1 / 4</div>
+              </div>
+            </div>
+            <aside style="width:360px">
+              <div class="card">
+                <h4 class="title-accent">Dados rápidos</h4>
+                <p class="note"><strong>Hero:</strong> Transformando vidas através da educação</p>
+                <p class="note"><strong>CTA principal:</strong> Faça sua Doação</p>
+                <p class="note"><strong>Impacto:</strong> 43 anos • 15.000+ vidas • 484 atendidos</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 2: Diagrama -->
+      <section id="slide-2" class="slide" aria-labelledby="s2-title">
+        <div class="card">
+          <h2 id="s2-title" class="title-accent">Diagrama de Casos de Uso</h2>
+          <div class="columns">
+            <div>
+              <p class="note">Diagrama estático representando atores e casos de uso prioritários (inscrição PACTO, doação, denúncias, voluntariado e painel administrativo).</p>
+              <div style="margin-top:12px">
+                <!-- simplified SVG, styled for red theme -->
+                <svg viewBox="0 0 1000 420" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de Casos de Uso Grupo Primavera">
+                  <style>
+                    .actor{fill:#fff;stroke:var(--primary);stroke-width:2}
+                    .actor-text{fill:#7b2c2c;font-weight:700;font-size:13px}
+                    .usecase{fill:#fff;stroke:#ffdede;stroke-width:1.2}
+                    .usecase-text{fill:#5a2a2a;font-size:12px}
+                    .system{fill:#fff;stroke:#ffeaea;stroke-width:2}
+                    .line{stroke:var(--primary);stroke-width:1.3;stroke-linecap:round}
+                    .title{fill:var(--primary);font-weight:700;font-size:14px}
+                  </style>
+
+                  <g transform="translate(24,40)">
+                    <rect x="0" y="0" width="120" height="64" rx="8" class="actor"/>
+                    <text x="60" y="38" text-anchor="middle" class="actor-text">Visitante</text>
+                  </g>
+                  <g transform="translate(24,120)">
+                    <rect x="0" y="0" width="120" height="64" rx="8" class="actor"/>
+                    <text x="60" y="38" text-anchor="middle" class="actor-text">Responsável</text>
+                  </g>
+                  <g transform="translate(24,200)">
+                    <rect x="0" y="0" width="120" height="64" rx="8" class="actor"/>
+                    <text x="60" y="38" text-anchor="middle" class="actor-text">Doador (PF)</text>
+                  </g>
+
+                  <g transform="translate(840,40)">
+                    <rect x="0" y="0" width="120" height="64" rx="8" class="actor"/>
+                    <text x="60" y="38" text-anchor="middle" class="actor-text">Gestor / Staff</text>
+                  </g>
+                  <g transform="translate(840,140)">
+                    <rect x="0" y="0" width="120" height="64" rx="8" class="actor"/>
+                    <text x="60" y="38" text-anchor="middle" class="actor-text">Empresa (PJ)</text>
+                  </g>
+
+                  <g transform="translate(200,20)">
+                    <rect x="0" y="0" width="560" height="380" rx="12" class="system"/>
+                    <text x="280" y="28" text-anchor="middle" class="title">Sistema Web — Grupo Primavera</text>
+                    <g transform="translate(44,56)">
+                      <ellipse cx="120" cy="34" rx="110" ry="22" class="usecase"/>
+                      <text x="120" y="38" text-anchor="middle" class="usecase-text">Ver Novidades / TV</text>
+
+                      <ellipse cx="120" cy="84" rx="110" ry="22" class="usecase"/>
+                      <text x="120" y="88" text-anchor="middle" class="usecase-text">Pesquisar Conteúdo</text>
+
+                      <ellipse cx="120" cy="134" rx="110" ry="22" class="usecase"/>
+                      <text x="120" y="138" text-anchor="middle" class="usecase-text">Canal de Denúncias (anônimo)</text>
+
+                      <ellipse cx="120" cy="184" rx="110" ry="22" class="usecase"/>
+                      <text x="120" y="188" text-anchor="middle" class="usecase-text">Cadastrar Voluntário</text>
+                    </g>
+
+                    <g transform="translate(320,56)">
+                      <ellipse cx="120" cy="34" rx="110" ry="22" class="usecase"/>
+                      <text x="120" y="38" text-anchor="middle" class="usecase-text">Formulário PACTO (inscrição)</text>
+
+                      <ellipse cx="120" cy="84" rx="110" ry="22" class="usecase"/>
+                      <text x="120" y="88" text-anchor="middle" class="usecase-text">Doação (PIX/QR) + Recibo</text>
+
+                      <ellipse cx="120" cy="134" rx="110" ry="22" class="usecase"/>
+                      <text x="120" y="138" text-anchor="middle" class="usecase-text">Área PJ / Propostas</text>
+
+                      <ellipse cx="120" cy="184" rx="110" ry="22" class="usecase"/>
+                      <text x="120" y="188" text-anchor="middle" class="usecase-text">Painel Administrativo</text>
+                    </g>
+                  </g>
+
+                  <line class="line" x1="148" y1="60" x2="240" y2="96"/>
+                  <line class="line" x1="148" y1="140" x2="240" y2="150"/>
+                  <line class="line" x1="148" y1="220" x2="620" y2="120"/>
+                  <line class="line" x1="840" y1="76" x2="720" y2="96"/>
+                  <line class="line" x1="840" y1="180" x2="720" y2="180"/>
+                  <line class="line" x1="840" y1="208" x2="720" y2="150"/>
+                </svg>
+              </div>
+
+              <div class="legend">
+                <strong>Legenda:</strong> Atores e casos de uso mapeados com prioridade para a primeira entrega.
+              </div>
+            </div>
+
+            <aside class="card">
+              <h4 class="title-accent">Narrativas rápidas</h4>
+              <ol class="note">
+                <li><strong>Inscrição:</strong> Responsável preenche PACTO → anexa documentos → recebe protocolo por email.</li>
+                <li><strong>Doação:</strong> Doador escaneia QR → envia comprovante → sistema gera recibo.</li>
+                <li><strong>Denúncia:</strong> Visitante envia relato anônimo → protocolo é gerado → gestor é notificado.</li>
+              </ol>
+            </aside>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <div class="note">Slide 2 / 4</div>
+          <div></div>
+        </div>
+      </section>
+
+      <!-- Slide 3: Prototipação -->
+      <section id="slide-3" class="slide" aria-labelledby="s3-title">
+        <div class="card">
+          <h2 id="s3-title" class="title-accent">Protótipos das Telas Principais</h2>
+          <p class="note">Wireframes low-fidelity inspirados no site. Ideais para validar fluxo antes de produzir mockups no Figma.</p>
+
+          <div class="proto-grid" role="list">
+            <!-- Login -->
+            <div class="mock" role="listitem">
+              <h4>Login / Acesso</h4>
+              <!-- simplified visual -->
+              <svg viewBox="0 0 320 140" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="320" height="140" rx="8" fill="#fff" stroke="#ffeaea"/>
+                <text x="16" y="26" font-size="13" fill="#7b2c2c">Painel de Acesso — Gestor</text>
+                <rect x="16" y="48" width="288" height="24" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
+                <rect x="16" y="82" width="160" height="28" rx="6" fill="linear-gradient(90deg,var(--primary),var(--primary-2))"/>
+              </svg>
+              <div class="note">Acesso administrativo com autenticação e recuperação de senha.</div>
+            </div>
+
+            <!-- PACTO -->
+            <div class="mock" role="listitem">
+              <h4>Inscrição PACTO</h4>
+              <svg viewBox="0 0 320 140" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="320" height="140" rx="8" fill="#fff" stroke="#ffeaea"/>
+                <text x="16" y="26" font-size="13" fill="#7b2c2c">Formulário PACTO — Passo 1/3</text>
+                <rect x="16" y="44" width="288" height="10" rx="6" fill="#fff7f7"/>
+                <rect x="16" y="64" width="288" height="26" rx="6" fill="#fff7f7"/>
+              </svg>
+              <div class="note">Wizard com indicação de progresso e upload de documentos.</div>
+            </div>
+
+            <!-- Doação -->
+            <div class="mock" role="listitem">
+              <h4>Doação (PIX / QR)</h4>
+              <svg viewBox="0 0 320 140" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="320" height="140" rx="8" fill="#fff" stroke="#ffeaea"/>
+                <text x="16" y="26" font-size="13" fill="#7b2c2c">Doar — PIX / QR</text>
+                <rect x="16" y="44" width="108" height="84" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
+                <rect x="136" y="60" width="168" height="28" rx="6" fill="#fff7f7"/>
+              </svg>
+              <div class="note">QR destacado, opção de comprovação e emissão de recibo.</div>
+            </div>
+
+            <!-- Denúncia -->
+            <div class="mock" role="listitem">
+              <h4>Canal de Denúncias</h4>
+              <svg viewBox="0 0 320 140" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="320" height="140" rx="8" fill="#fff" stroke="#ffeaea"/>
+                <text x="16" y="26" font-size="13" fill="#7b2c2c">Denúncias (anônimo)</text>
+                <rect x="16" y="48" width="288" height="58" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
+              </svg>
+              <div class="note">Formulário anônimo com geração de protocolo.</div>
+            </div>
+
+            <!-- Voluntariado -->
+            <div class="mock" role="listitem">
+              <h4>Voluntariado</h4>
+              <svg viewBox="0 0 320 140" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="320" height="140" rx="8" fill="#fff" stroke="#ffeaea"/>
+                <text x="16" y="26" font-size="13" fill="#7b2c2c">Voluntariado — Vagas</text>
+                <rect x="16" y="48" width="288" height="26" rx="6" fill="#fff7f7"/>
+                <rect x="16" y="84" width="120" height="28" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
+              </svg>
+              <div class="note">Lista de vagas com CTA para candidatura.</div>
+            </div>
+
+            <!-- Painel -->
+            <div class="mock" role="listitem">
+              <h4>Painel Administrativo</h4>
+              <svg viewBox="0 0 320 120" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="320" height="120" rx="8" fill="#fff" stroke="#ffeaea"/>
+                <text x="16" y="26" font-size="13" fill="#7b2c2c">Painel — Gestor</text>
+                <rect x="16" y="44" width="120" height="24" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
+                <rect x="156" y="44" width="148" height="24" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
+                <rect x="16" y="76" width="288" height="28" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
+              </svg>
+              <div class="note">Listagens, filtros e exportações (CSV/PDF).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <div class="note">Slide 3 / 4</div>
+          <div></div>
+        </div>
+      </section>
+
+      <!-- Slide 4: Próximos passos e footer note -->
+      <section id="slide-4" class="slide" aria-labelledby="s4-title">
+        <div class="card">
+          <h2 id="s4-title" class="title-accent">Próximos passos & Recomendações</h2>
+          <div class="columns">
+            <div>
+              <h3 class="title-accent">Backlog inicial (sugestão)</h3>
+              <ol class="note">
+                <li>US001 — Implementar formulário PACTO (MVP) com upload e confirmação.</li>
+                <li>US002 — Página de Doação (PIX/QR) + comprovante/recibo.</li>
+                <li>US003 — Canal de denúncias anônimas com protocolo.</li>
+                <li>US004 — Painel básico para gestores (listar/filtrar/exportar).</li>
+              </ol>
+
+              <h3 class="title-accent" style="margin-top:12px">Design & Testes</h3>
+              <ul class="note">
+                <li>Transformar os wireframes em protótipos clicáveis (Figma).</li>
+                <li>Testes de usabilidade com pelo menos 3 usuários: responsável/gestor/doadores.</li>
+                <li>Plano de testes: casos para inscrição, doação, denúncia e upload de documentos.</li>
+              </ul>
+            </div>
+
+            <aside class="card">
+              <h4 class="title-accent">Governança</h4>
+              <p class="note">Organizar repositório com /docs, /design, /src; usar branch strategy (main/develop/feature/*) e incluir professor e coordenação como maintainers.</p>
+
+              <h4 class="title-accent" style="margin-top:12px">Hospedagem & Infra</h4>
+              <p class="note">Deploy estático para conteúdo institucional (Netlify/Vercel); backend em cloud para registros sensíveis e integração segura com meios de pagamento.</p>
+            </aside>
+          </div>
+
+          <div style="margin-top:14px" class="fancy-footer" aria-hidden="false">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+              <div>
+                <div style="font-weight:700;color:var(--primary)">Nota de roda pé</div>
+                <div class="small-muted" style="margin-top:6px">Gabriela Pires — apresentação e design das telas</div>
+              </div>
+              <div style="text-align:right">
+                <div class="small-muted">Contato: contato@gprimavera.org.br • (19) 3746-7990</div>
+                <div style="margin-top:6px" class="small-muted">© Grupo Primavera — baseado no site oficial</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="nav-actions">
+          <div class="note">Slide 4 / 4</div>
+          <div></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      let idx = slides.findIndex(s => s.classList.contains('active'));
+      if(idx < 0) idx = 0;
+      function show(i){
+        slides.forEach(s=>s.classList.remove('active'));
+        slides[i].classList.add('active');
+        idx = i;
+        window.location.hash = slides[i].id;
+      }
+      document.getElementById('next').addEventListener('click', ()=> show((idx+1)%slides.length));
+      document.getElementById('prev').addEventListener('click', ()=> show((idx-1+slides.length)%slides.length));
+      window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowRight') show((idx+1)%slides.length); if(e.key==='ArrowLeft') show((idx-1+slides.length)%slides.length) });
+      // load from hash
+      const h = location.hash.replace('#','');
+      if(h){
+        const i = slides.findIndex(s=>s.id===h);
+        if(i>=0) show(i);
+      } else show(idx);
+      document.getElementById('download').addEventListener('click', ()=>{
+        const html = '<!doctype html>\\n' + document.documentElement.outerHTML;
+        const blob = new Blob([html], {type:'text/html'});
+        const url = URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='grupo-primavera-slides-red.html'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+      });
+    })();
+  </script>
+</body>
+</html>
