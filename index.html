@@ -56,7 +56,7 @@
     <header>
       <div>
         <h1>Grupo Primavera — Diagrama & Protótipos</h1>
-        <div class="meta">Apresentação gerada a partir do site oficial — layout atualizado em vermelho</div>
+
       </div>
       <div class="controls">
         <button id="prev" class="btn">◀ Anterior</button>
@@ -72,7 +72,6 @@
           <h2 id="s1-title" class="title-accent">Capa — Grupo Primavera</h2>
           <div class="columns" style="align-items:center">
             <div>
-              <p class="note">Apresentação com: diagrama de casos de uso, protótipos das telas principais (low-fidelity), backlog inicial e próximos passos. Visual atualizado com paleta vermelha para combinar com a identidade visual do site.</p>
               <div style="margin-top:12px" class="note"><strong>Base:</strong> hero, programas, impacto, formas de ajudar e contato (arquivo: grupo-primavera.html)</div>
               <div class="nav-actions" style="margin-top:16px">
                 <div class="small-muted">Navegue com as setas ou botões</div>
@@ -144,10 +143,8 @@
                       <text x="120" y="88" text-anchor="middle" class="usecase-text">Pesquisar Conteúdo</text>
 
                       <ellipse cx="120" cy="134" rx="110" ry="22" class="usecase"/>
-                      <text x="120" y="138" text-anchor="middle" class="usecase-text">Canal de Denúncias (anônimo)</text>
 
                       <ellipse cx="120" cy="184" rx="110" ry="22" class="usecase"/>
-                      <text x="120" y="188" text-anchor="middle" class="usecase-text">Cadastrar Voluntário</text>
                     </g>
 
                     <g transform="translate(320,56)">
@@ -158,10 +155,8 @@
                       <text x="120" y="88" text-anchor="middle" class="usecase-text">Doação (PIX/QR) + Recibo</text>
 
                       <ellipse cx="120" cy="134" rx="110" ry="22" class="usecase"/>
-                      <text x="120" y="138" text-anchor="middle" class="usecase-text">Área PJ / Propostas</text>
 
                       <ellipse cx="120" cy="184" rx="110" ry="22" class="usecase"/>
-                      <text x="120" y="188" text-anchor="middle" class="usecase-text">Painel Administrativo</text>
                     </g>
                   </g>
 
@@ -239,16 +234,7 @@
               <div class="note">QR destacado, opção de comprovação e emissão de recibo.</div>
             </div>
 
-            <!-- Denúncia -->
-            <div class="mock" role="listitem">
-              <h4>Canal de Denúncias</h4>
-              <svg viewBox="0 0 320 140" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="320" height="140" rx="8" fill="#fff" stroke="#ffeaea"/>
-                <text x="16" y="26" font-size="13" fill="#7b2c2c">Denúncias (anônimo)</text>
-                <rect x="16" y="48" width="288" height="58" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
-              </svg>
-              <div class="note">Formulário anônimo com geração de protocolo.</div>
-            </div>
+          
 
             <!-- Voluntariado -->
             <div class="mock" role="listitem">
@@ -262,20 +248,7 @@
               <div class="note">Lista de vagas com CTA para candidatura.</div>
             </div>
 
-            <!-- Painel -->
-            <div class="mock" role="listitem">
-              <h4>Painel Administrativo</h4>
-              <svg viewBox="0 0 320 120" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="320" height="120" rx="8" fill="#fff" stroke="#ffeaea"/>
-                <text x="16" y="26" font-size="13" fill="#7b2c2c">Painel — Gestor</text>
-                <rect x="16" y="44" width="120" height="24" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
-                <rect x="156" y="44" width="148" height="24" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
-                <rect x="16" y="76" width="288" height="28" rx="6" fill="#fff7f7" stroke="#ffe6e6"/>
-              </svg>
-              <div class="note">Listagens, filtros e exportações (CSV/PDF).</div>
-            </div>
-          </div>
-        </div>
+           
 
         <div class="nav-actions">
           <div class="note">Slide 3 / 4</div>
@@ -305,9 +278,7 @@
               </ul>
             </div>
 
-            <aside class="card">
-              <h4 class="title-accent">Governança</h4>
-              <p class="note">Organizar repositório com /docs, /design, /src; usar branch strategy (main/develop/feature/*) e incluir professor e coordenação como maintainers.</p>
+        
 
               <h4 class="title-accent" style="margin-top:12px">Hospedagem & Infra</h4>
               <p class="note">Deploy estático para conteúdo institucional (Netlify/Vercel); backend em cloud para registros sensíveis e integração segura com meios de pagamento.</p>
